@@ -6,7 +6,6 @@ import tracemalloc
 from math import sqrt
 from collections import defaultdict
 
-
 @dataclass
 class PuzzleData:
     rows: int
@@ -208,7 +207,7 @@ class PuzzleSolver:
 
 def main():
     solver = PuzzleSolver()
-    filenames = sorted(glob.glob("inputSubmit/001.txt"))
+    filenames = sorted(glob.glob("input/001.txt"))
     
     if not filenames:
         print("No input files found in inputSubmit/")
