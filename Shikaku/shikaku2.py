@@ -22,6 +22,7 @@ class PuzzleSolver:
     def __init__(self):
         self.data = None
         self.step_count = 0  # Added to count steps
+        self.print_steps = True 
 
     def read_puzzle(self, input_filename: str) -> None:
         """Read puzzle data from file and initialize puzzle structure."""
@@ -121,6 +122,7 @@ class PuzzleSolver:
         """Depth-first search to solve the puzzle."""
         # Increment step counter
         self.step_count += 1
+        print(f"\nStep {self.step_count}: ")
         
         if next_index >= len(self.data.location_data):
             return True
@@ -128,7 +130,7 @@ class PuzzleSolver:
         e_row, e_col, e_value = self.data.location_data[next_index]
         
         # Print current step information
-        print(f"\n🔍 Trying to place region for value {e_value} at ({e_row}, {e_col})")
+        print(f"Trying to place region for value {e_value} at ({e_row}, {e_col})")
 
         while self.data.count[next_index] < len(self.data.factors_cache[next_index]):
             fac = self.data.factors_cache[next_index][self.data.count[next_index]]
@@ -230,9 +232,9 @@ class PuzzleSolver:
         # Print final result status
         print("\nFinal result:")
         if success:
-            print("✅ Solution found!")
+            print("Solution found!")
         else:
-            print("❌ No solution found.")
+            print("No solution found.")
             
         print(f"Total steps explored: {self.step_count}")
         
@@ -247,7 +249,7 @@ class PuzzleSolver:
 
 def main():
     solver = PuzzleSolver()
-    filenames = sorted(glob.glob("input/001.txt"))
+    filenames = sorted(glob.glob("input/002.txt"))
     
     if not filenames:
         print("No input files found in inputSubmit/")

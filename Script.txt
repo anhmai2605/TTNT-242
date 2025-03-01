@@ -1,7 +1,0 @@
-Khởi tạo và đọc dữ liệu: Chương trình đọc kích thước lưới, nhập dữ liệu từ tệp đầu vào và xác định vị trí các số trong lưới.
-Xử lý và chuẩn bị dữ liệu: Tính toán tất cả các cách chia hình chữ nhật hợp lệ cho từng số trong lưới.
-Kiểm tra hợp lệ đầu vào: Kiểm tra xem các hình chữ nhật có nằm trong giới hạn và không chồng lấn lên nhau không.
-Giải thuật tìm kiếm DFS: Dùng thuật toán tìm kiếm theo chiều sâu để thử từng cách chia và quay lui nếu gặp trường hợp không hợp lệ.
-Khởi tạo và tối ưu hóa: Áp dụng các chiến lược như ưu tiên số lớn, cắt giảm không gian tìm kiếm và loại bỏ phương án không hợp lệ sớm.
-Giải và hiển thị kết quả: Thực hiện thuật toán, kiểm tra lời giải, đo thời gian và bộ nhớ sử dụng.
-Thực thi chương trình: Chạy chương trình với dữ liệu đầu vào, xuất kết quả và hiển thị lưới đã giải.
